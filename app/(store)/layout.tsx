@@ -1,6 +1,11 @@
+import Header from "@/components/Header";
+
 function StoreLayout({children}: {children: React.ReactNode}) {
   return (
-    <div>{children}</div>
+    <div>
+        <Header />
+        {children}
+        </div>
   )
 }
 
