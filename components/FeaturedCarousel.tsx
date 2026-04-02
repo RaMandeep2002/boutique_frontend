@@ -8,12 +8,13 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { cn, formatCurrency } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import type { Product } from "@/lib/mock-data";
 import { Badge } from "./ui/badge";
+import { formatCurrency } from "@/lib/CurrenctFormat";
 
 interface FeaturedCarouselProps {
   products?: Product[];
