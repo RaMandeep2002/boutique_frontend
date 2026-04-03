@@ -3,6 +3,10 @@ export interface Product {
   title: string;
   description: string;
   price: number;
+  originalPrice?: number;
+  stockLevel?: number;
+  rating?: number;
+  reviewCount?: number;
   slug: string;
   category: string;
   images: Array<{
@@ -19,6 +23,10 @@ export const mockLadySuits: Product[] = [
     description:
       "Elegant royal silk suit featuring detailed zari embroidery with a matching dupatta. Perfect for weddings and festive occasions.",
     price: 2499,
+    originalPrice: 2999,
+    stockLevel: 15,
+    rating: 4.8,
+    reviewCount: 124,
     slug: "royal-silk-embroidered-suit",
     category: "Lady Suits",
     images: [
@@ -37,6 +45,10 @@ export const mockLadySuits: Product[] = [
     description:
       "Stylish georgette party wear suit with heavy embroidery and stone work, ideal for evening parties and celebrations.",
     price: 3199,
+    originalPrice: 3899,
+    stockLevel: 5,
+    rating: 4.9,
+    reviewCount: 86,
     slug: "designer-georgette-party-suit",
     category: "Lady Suits",
     images: [
@@ -55,13 +67,17 @@ export const mockLadySuits: Product[] = [
     description:
       "Comfortable cotton daily wear suit designed for everyday use. Lightweight, breathable, and stylish.",
     price: 1299,
+    originalPrice: 1599,
+    stockLevel: 42,
+    rating: 4.5,
+    reviewCount: 215,
     slug: "cotton-daily-wear-suit",
     category: "Lady Suits",
     images: [
       {
         asset: {
-          url: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1000&auto=format&fit=crop",
-          altText: "Elegant embroidered lady suit"
+          url: "https://images.unsplash.com/photo-1669194722837-06fbe316a1eb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          altText: "Cotton Daily Wear Suit in light green"
         }
       }
     ]
@@ -73,6 +89,10 @@ export const mockLadySuits: Product[] = [
     description:
       "Traditional Punjabi Patiala suit set with vibrant colors and printed dupatta. Perfect for festive and casual wear.",
     price: 1899,
+    originalPrice: 2199,
+    stockLevel: 8,
+    rating: 4.7,
+    reviewCount: 92,
     slug: "punjabi-patiala-suit-set",
     category: "Lady Suits",
     images: [
@@ -91,6 +111,10 @@ export const mockLadySuits: Product[] = [
     description:
       "Graceful Anarkali suit with flared design and embroidered neckline. A stunning choice for weddings and parties.",
     price: 3599,
+    originalPrice: 4299,
+    stockLevel: 3,
+    rating: 5.0,
+    reviewCount: 45,
     slug: "anarkali-party-wear-suit",
     category: "Lady Suits",
     images: [
@@ -109,6 +133,10 @@ export const mockLadySuits: Product[] = [
     description:
       "Premium Chanderi fabric festive suit with elegant embroidery and soft dupatta. Perfect for traditional gatherings.",
     price: 2799,
+    originalPrice: 3199,
+    stockLevel: 21,
+    rating: 4.6,
+    reviewCount: 67,
     slug: "chanderi-festive-suit",
     category: "Lady Suits",
     images: [
