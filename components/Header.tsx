@@ -9,12 +9,12 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md dark:border-gray-800 dark:bg-gray-950/80">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm dark:border-gray-800 dark:bg-gray-950/80">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:h-20 lg:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-xl font-bold tracking-tight text-gray-900 dark:text-white md:text-2xl">
-            Ritu Boutique
+          Reetu boutique
           </span>
         </Link>
 
@@ -42,14 +42,14 @@ export default function Header() {
 
         {/* Right Side Actions */}
         <div className="hidden items-center space-x-4 md:flex">
-          <Button className="flex items-center gap-2 p-2 text-white bg-zinc-800 transition-colors">
+          <Button className="flex items-center gap-2 p-2 px-5 text-white bg-zinc-800 hover:bg-zinc-950 transition-colors">
             <Box className="h-5 w-5" />
             <span className="text-sm font-medium">Your Order</span>
           </Button>
-          <Button className="flex items-center gap-2 p-2 text-white bg-amber-400 transition-colors">
+          {/* <Button className="flex items-center gap-2 p-2 px-5 text-white bg-amber-400 hover:bg-amber-500 transition-colors">
             <User className="h-5 w-5" />
             <span className="text-sm font-medium transition-colors">Account</span>
-          </Button>
+          </Button> */}
           <button className="relative rounded-full p-2 text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
             <ShoppingBag className="h-5 w-5" />
             <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-blue-600 text-[10px] font-medium text-white">

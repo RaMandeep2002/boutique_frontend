@@ -4,7 +4,7 @@ import FeaturedCarousel from "@/components/FeaturedCarousel";
 import { FeaturedCarouselSkeleton } from "@/components/FeaturedCarouselSkeleton";
 import ProductCard from "@/components/ProductCard";
 import ProductFilters from "@/components/ProductFilters";
-import { mockLadySuits } from "@/lib/mock-data";
+import { mockPunjabiSuits } from "@/lib/mock-data";
 import Link from "next/link";
 import { Suspense } from "react";
 
@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-50/50 dark:bg-zinc-950/50 transition-colors duration-500">
       <Suspense fallback={<FeaturedCarouselSkeleton />}>
-        <FeaturedCarousel products={mockLadySuits} />
+        <FeaturedCarousel products={mockPunjabiSuits} />
       </Suspense>
 
       <div className="bg-white dark:bg-zinc-950 pb-4 shadow-sm">
@@ -26,11 +26,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mb-8">
+      {/* <div className="mb-8">
         <Suspense fallback={<CategoryTilesSkeleton />}>
           <CategoryTiles />
         </Suspense>
-      </div>
+      </div> */}
 
       <main className="container mx-auto px-4 py-8 md:px-6 lg:px-8">
         <div className="flex flex-col gap-10 lg:flex-row">
@@ -46,7 +46,7 @@ export default function Home() {
             <div className="mb-8 flex flex-col items-start justify-between gap-4 border-b border-zinc-100 pb-8 dark:border-zinc-800 md:flex-row md:items-end">
               <div className="space-y-1">
                 <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
-                  {mockLadySuits.length} products found
+                  {mockPunjabiSuits.length} products found
                 </p>
                 <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
                   Curated Essentials
@@ -64,7 +64,7 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
-              {mockLadySuits.map((product) => (
+              {mockPunjabiSuits.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
