@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ShoppingBag, Star } from "lucide-react";
 import type { Product } from "@/lib/mock-data";
 import { cn } from "@/lib/utils";
+import { formatCurrency } from "@/lib/CurrenctFormat";
 
 interface ProductCardProps {
   product: Product;
@@ -82,11 +83,11 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         <div className="mb-4 flex items-baseline gap-2">
           <span className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
-            £{product.price}
+            {formatCurrency(product.price)}
           </span>
           {product.originalPrice && (
             <span className="text-sm text-zinc-400 line-through">
-              £{product.originalPrice}
+              {formatCurrency(product.originalPrice)}
             </span>
           )}
           
